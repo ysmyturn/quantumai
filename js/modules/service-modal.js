@@ -9,7 +9,7 @@ function initServiceModal() {
         { src: 'img/qeepi-dashboard.png', label: '대시보드' },
         { src: 'img/qeepi-gathering.png', label: '데이터 수집' },
     ] },
-    'modal-claimq': { title: 'Claim-Q', imgs: [
+    'modal-claimq': { title: 'claimi', imgs: [
         { src: 'img/claimq-review.png',    label: '심사화면' },
         { src: 'img/claimq-dashboard.png', label: '대시보드' },
     ] },

@@ -290,7 +290,7 @@
 }
 
 /* ============================================================
-   qeepi / Claim-Q / AI-Agent 대시보드 위젯 스타일
+   qeepi / claimi / AI-Agent 대시보드 위젯 스타일
    ============================================================ */
 
 /* ── qeepi 문서 목록 ── */
@@ -334,7 +334,7 @@
   background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
 }
 
-/* ── Claim-Q 청구 행 ── */
+/* ── claimi 청구 행 ── */
 .claimq-row {
   display: flex;
   align-items: center;

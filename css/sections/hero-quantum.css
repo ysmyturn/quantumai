@@ -88,7 +88,7 @@
   position: absolute; left: 50%; top: 50%;
   transform: translate(-50%, -50%) scale(.7);
   z-index: 3; pointer-events: none; opacity: 0;
-  font: 800 26px/1 'Inter', 'Noto Sans KR', sans-serif;
+  font: 800 52px/1 'Inter', 'Noto Sans KR', sans-serif;
   letter-spacing: -.5px;
   color: #fff;
   text-shadow: 0 2px 18px rgba(40,110,255,.7), 0 0 40px rgba(80,140,255,.5);
@@ -227,7 +227,7 @@
 
 /* 모바일 대응 */
 @media (max-width: 560px) {
-  .hero-core-title { font-size: 21px; }
+  .hero-core-title { font-size: 42px; }
   .hero-node-label { font-size: 11px; }
   .hero-node-sub   { font-size: 9px; }
   .hero-stage { padding: 80px 20px 56px; }

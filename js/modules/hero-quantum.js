@@ -105,7 +105,7 @@ function initHeroQuantum() {
   const PLATS = [
     {name:'qeepi',     sub:'비정형 데이터 플랫폼'},
     {name:'sooni',    sub:'지능형 고객소통'},
-    {name:'Claim-Q',  sub:'보험 업무 자동화'},
+    {name:'claimi',  sub:'보험 업무 자동화'},
     {name:'AI Agent', sub:'상담 지원 및 자동 요약'}
   ];
 
@@ -132,16 +132,20 @@ function initHeroQuantum() {
     N = (W<560)? 520 : 900;
     P = [];
     for(let i=0;i<N;i++){
+      const a0 = Math.random()*Math.PI*2;
+      const r0 = Math.random();
+      const ix = CX + Math.cos(a0)*r0*RBASE;
+      const iy = CY + Math.sin(a0)*r0*RBASE;
       P.push({
-        x:CX, y:CY, px:CX, py:CY,
-        a:Math.random()*Math.PI*2,
-        rad:Math.random(),
+        x:ix, y:iy, px:ix, py:iy,
+        a:a0,
+        rad:r0,
         spd:0.3+Math.random()*0.9,
         size:0.6+Math.random()*1.8,
         group:i%4,
         seed:Math.random()*1000,
         col: Math.random()<0.3?BLUE_L:BLUE,
-        alpha:0
+        alpha:0.5+Math.random()*0.4
       });
     }
     BN = (W<560)? 140 : 280;
@@ -176,9 +180,10 @@ function initHeroQuantum() {
   function easeInOut(t){ t=Math.min(Math.max(t,0),1); return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2; }
   function easeOut(t){ return 1-Math.pow(1-Math.min(Math.max(t,0),1),2.6); }
 
-  const DUR = [2.6, 2.6, 2.0, 2.2, 3.0, 2.8, 3.0];
-  let phase=0, pt=0, globalT=0;
+  const DUR = [2.6, 2.6, 2.0, 2.2, 3.0, 2.8, 6.0];
+  let phase=6, pt=0, globalT=0;
   let raf=null, visible=true, last=0;
+  let firstPhase6=true;
 
   function updateLabels(techVis, platVis, posTech, posPlat){
     for(let i=0;i<labelEls.length;i++){
@@ -376,13 +381,30 @@ function initHeroQuantum() {
 
     if(coreTitle){
       let tv=0, sc=0.7;
-      if(phase===6){ tv=easeOut(prog*1.4); sc=0.7+0.3*easeOut(prog*1.4); }
+      if(phase===6){
+        if(firstPhase6){
+          // 2초 딜레이 → 0.8초 fade-in → 3초 유지 → 0.6초 fade-out (총 6초)
+          const fadeIn  = Math.min(1, Math.max(0, pt-2.0)/0.8);
+          const fadeOut = Math.min(1, Math.max(0, pt-5.4)/0.6);
+          tv = easeOut(fadeIn) * (1-easeOut(fadeOut));
+          sc = 0.85 + 0.15*easeOut(fadeIn);
+        } else {
+          // 루프 시 1초 fade-in → 3.5초 유지 → fade-out
+          const fadeIn  = Math.min(1, prog/0.17);
+          const fadeOut = Math.min(1, Math.max(0, prog-0.83)/0.17);
+          tv = easeOut(fadeIn) * (1-easeOut(fadeOut));
+          sc = 0.85 + 0.15*easeOut(fadeIn);
+        }
+      }
       coreTitle.style.left = CX + 'px';
       coreTitle.style.opacity=tv.toFixed(3);
       coreTitle.style.transform='translate(-50%,-50%) scale('+sc.toFixed(3)+')';
     }
 
-    if(prog>=1){ phase=(phase+1)%DUR.length; pt=0; }
+    if(prog>=1){
+      if(phase===6 && firstPhase6) firstPhase6=false;
+      phase=(phase+1)%DUR.length; pt=0;
+    }
     if(!reduce && visible) raf=requestAnimationFrame(frame);
   }
 
