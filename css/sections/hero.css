@@ -1,0 +1,278 @@
+/* sections/hero.css — 히어로 섹션 */
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+/* 세로 스택 Hero: 첫 화면 배너(100vh) + 스크롤 후 문구 */
+.hero-section.hero-stacked {
+  display: block;
+  min-height: auto;
+  justify-content: initial;
+  align-items: initial;
+  padding: 0;
+}
+
+/* 첫 진입 화면: 애니메이션 배너만 꽉 차게 (100vh) */
+.hero-stage {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 96px 24px 64px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #0d1338 0%, #0a1030 60%, #080c22 100%);
+}
+
+/* 스크롤 힌트 */
+.hero-scroll-hint {
+  position: absolute;
+  left: 50%; bottom: 32px;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  text-decoration: none;
+  z-index: 4;
+  animation: scrollHintFloat 2s ease-in-out infinite;
+}
+.hero-scroll-text {
+  font: 600 11px/1 var(--font-mono);
+  letter-spacing: 0.25em;
+  color: var(--text-muted);
+}
+.hero-scroll-arrow {
+  width: 20px; height: 20px;
+  border-right: 1.5px solid var(--text-muted);
+  border-bottom: 1.5px solid var(--text-muted);
+  transform: rotate(45deg);
+}
+@keyframes scrollHintFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.7; }
+  50%      { transform: translateX(-50%) translateY(6px); opacity: 1; }
+}
+
+/* Canvas for particles */
+#particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Grid overlay */
+.hero-grid-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Radial glow */
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.07) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hexagons */
+.hero-hexagons { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+
+@keyframes rotate-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes rotate-rev  { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+
+.hexagon {
+  position: absolute;
+  width: 120px;
+  height: 138px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  opacity: 0.04;
+}
+
+.hex-1 {
+  top: 12%;
+  left: 8%;
+  background: var(--color-primary);
+  animation: rotate-slow 20s linear infinite;
+}
+
+.hex-2 {
+  top: 20%;
+  right: 10%;
+  width: 80px;
+  height: 92px;
+  background: var(--color-accent);
+  animation: rotate-rev 28s linear infinite;
+}
+
+.hex-3 {
+  bottom: 20%;
+  left: 15%;
+  width: 60px;
+  height: 69px;
+  background: var(--color-secondary);
+  animation: rotate-slow 35s linear infinite;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--border-hover);
+  background: rgba(0, 212, 255, 0.05);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-primary);
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
+  50%       { opacity: 0.7; box-shadow: 0 0 0 5px rgba(0, 212, 255, 0); }
+}
+
+.hero-h1 {
+  font-size: clamp(48px, 6vw, 92px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 28px;
+  color: var(--text-primary);
+}
+
+.hero-h1 .word {
+  display: inline-block;
+  animation: word-fade-up 0.7s ease both;
+}
+
+.hero-h1 .word:nth-child(1) { animation-delay: 0.1s; }
+.hero-h1 .word:nth-child(2) { animation-delay: 0.2s; }
+.hero-h1 .word:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes word-fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-sub {
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto 40px;
+  line-height: 1.75;
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Metrics Bar */
+.hero-metrics {
+  position: relative;
+  z-index: 2;
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(10, 15, 44, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 100px;
+  padding: 14px 32px;
+  flex-wrap: wrap;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 4px 20px;
+  white-space: nowrap;
+}
+
+.metric-icon { font-size: 14px; }
+
+.metric-sep {
+  width: 1px;
+  height: 20px;
+  background: rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-chevron {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid rgba(255,255,255,0.3);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  transform: rotate(45deg);
+  animation: bounce-down 1.8s ease-in-out infinite;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.4; }
+  50%       { transform: rotate(45deg) translateY(6px); opacity: 1; }
+}
+
+.br-desktop { display: inline; }
+

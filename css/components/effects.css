@@ -1,0 +1,57 @@
+/* components/effects.css — 리빌 애니메이션 / 그라데이션 텍스트 */
+/* ─── REVEAL ANIMATIONS ──────────────────────────────────── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── GRADIENT TEXT ──────────────────────────────────────── */
+.grad-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--color-primary) 50%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 30%, var(--color-secondary) 60%, var(--color-primary) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.blue-shimmer {
+  background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 40%, var(--color-accent) 70%, var(--color-secondary) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+.green-shimmer {
+  background: linear-gradient(90deg, var(--color-success) 0%, var(--color-primary) 40%, var(--color-success) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+

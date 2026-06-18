@@ -1,0 +1,41 @@
+/* components/responsive.css — 모바일 반응형 오버라이드 */
+/* ============================================================
+   MOBILE RESPONSIVE OVERRIDES
+   ============================================================ */
+@media (max-width: 1024px) {
+  .nav-links, .btn-nav-cta { display: none; }
+  .hamburger { display: flex; }
+}
+
+@media (max-width: 768px) {
+  .hero-h1 { letter-spacing: -0.02em; }
+  .hero-metrics {
+    border-radius: var(--radius-card);
+    padding: 16px 20px;
+    width: 100%;
+    max-width: 480px;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .metric-sep { display: none; }
+  .metric-item { justify-content: center; }
+  .br-desktop { display: none; }
+  .tech-tabs-nav { width: 100%; flex-direction: column; }
+  .tech-tab { text-align: left; }
+  .tech-panel { padding: 24px; }
+  .contact-form-wrap { padding: 24px; }
+}
+
+@media (max-width: 480px) {
+  .stats-row { padding: 24px 12px; }
+  .service-card .glass-card { padding: 24px; }
+
+/* service-card 4열 대응 — 기본(데스크톱) 패딩 조정 */
+.service-card.glass-card { padding: 24px; }
+  .neural-flow { flex-direction: column; height: auto; gap: 16px; }
+  .neural-connections { display: none; }
+  .data2vec-flow { flex-direction: column; }
+  .compression-viz { grid-template-columns: 1fr; }
+  .comp-arrow { flex-direction: row; padding: 8px 0; }
+}
+

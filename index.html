@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enterprise AI Technology | Proprietary sLLM & Multimodal AI</title>
+  <meta name="description" content="Jeffri™ sLLM, Data2Vec™ multimodal engine, and Ultra Compression Technology — proprietary AI for enterprise-grade intelligence." />
+  <meta property="og:title" content="Enterprise AI Technology | Proprietary sLLM & Multimodal AI" />
+  <meta property="og:description" content="We own the AI stack. Jeffri™ sLLM, Data2Vec™ multimodal engine, and Ultra Compression Technology for enterprise." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="Home">
+        <img src="img/logo.svg" alt="Quantum AI" class="nav-logo-img" style="height:32px;width:auto;display:block;" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#technology" class="nav-link">Technology</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#references" class="nav-link">Reference</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="company.html" class="nav-link nav-link-alt">Company</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-nav-cta" style="display:none;">Get Started</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+      <button class="drawer-close" aria-label="Close menu">✕</button>
+      <ul role="list">
+        <li><a href="#hero" class="drawer-link">Intro</a></li>
+        <li><a href="#technology" class="drawer-link">Technology</a></li>
+        <li><a href="#services" class="drawer-link">Services</a></li>
+        <li><a href="#references" class="drawer-link">Reference</a></li>
+        <li><a href="#contact" class="drawer-link">Contact</a></li>
+        <li class="drawer-divider" aria-hidden="true"></li>
+        <li><a href="company.html" class="drawer-link drawer-link-alt">Company</a></li>
+        <li style="display:none;"><a href="#contact" class="btn btn-primary drawer-cta">Get Started</a></li>
+      </ul>
+    </div>
+    <div class="drawer-overlay"></div>
+  </header>
+
+  <main>
+
+    <!-- ===== SECTION 1: HERO (quantum-ai-final.html 애니메이션 적용) ===== -->
+    <section id="hero" class="hero-section hero-stacked" aria-label="Hero">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+
+      <!-- 첫 화면: 애니메이션 배너만 단독 노출 (100vh) -->
+      <div class="hero-stage">
+        <div class="hero-vis-banner">
+          <div class="hero-vis-wrap">
+            <canvas class="hero-canvas-3d" id="heroKvCanvas" aria-hidden="true"></canvas>
+            <div class="hero-node-labels" id="heroNodeLabels" aria-hidden="true"></div>
+            <div class="hero-core-title" id="heroCoreTitle">퀀텀에이아이</div>
+          </div>
+        </div>
+        <a href="#hero-copy" class="hero-scroll-hint" aria-label="아래로 스크롤">
+          <span class="hero-scroll-text">SCROLL</span>
+          <span class="hero-scroll-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <!-- 스크롤 후: 히어로 문구 (중앙 정렬) -->
+      <div class="hero-inner" id="hero-copy">
+        <div class="hero-copy reveal-up">
+          <div class="hero-kicker"><span class="hero-kicker-dot"></span>Enterprise AI Platform</div>
+          <h1 class="hero-h1 kr">
+            <span class="block"><span class="hw">우리는 </span><span class="grad g1">대화</span><span class="hw">하고, </span><span class="grad g2">이해</span><span class="hw">하며,</span></span>
+            <span class="block" style="white-space:nowrap;"><span class="grad g3">문제를 해결하는</span><span class="hw"> AI를 만듭니다</span></span>
+          </h1>
+          <p class="hero-sub">고객 상담 및 응대부터 문서 처리, 보험 심사까지<br>퀀텀에이아이는 기업 업무를 더 빠르고 효율적으로 만드는<br>AI 플랫폼을 제공합니다.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn-hero-p">
+              상담신청
+              <svg width="20" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5h8M7 2.5l4 4-4 4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: WHY US ===== -->
+    <section id="why-us" class="section why-section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <h2 id="why-title" class="section-h2">퀀텀은 자체 AI를 스스로 만듭니다</h2>
+          <p class="section-sub">기존 AI 기술을 연결하는 수준을 넘어, 자체 AI를 스스로 만듭니다. </br>퀀텀에이아이는 독자 원천기술로 더 가볍고, 더 안전하며, 더 강력한 AI를 제공합니다.</p>
+        </div>
+
+        <div class="cards-grid three-col">
+          <!-- Card 1 -->
+          <article class="glass-card reveal-up" style="--delay:0.1s" aria-label="Ultra Lightweight AI">
+            <div class="card-icon-wrap cyan-glow">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect x="8" y="8" width="16" height="16" rx="2" stroke="#00D4FF" stroke-width="1.5"/>
+                <rect x="12" y="12" width="8" height="8" rx="1" fill="#00D4FF" opacity="0.3"/>
+                <line x1="4" y1="12" x2="8" y2="12" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="4" y1="16" x2="8" y2="16" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="4" y1="20" x2="8" y2="20" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="24" y1="12" x2="28" y2="12" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="24" y1="16" x2="28" y2="16" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="24" y1="20" x2="28" y2="20" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="12" y1="4" x2="12" y2="8" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="16" y1="4" x2="16" y2="8" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="20" y1="4" x2="20" y2="8" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="12" y1="24" x2="12" y2="28" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="16" y1="24" x2="16" y2="28" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="20" y1="24" x2="20" y2="28" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="card-badge badge-cyan">10x Faster</span>
+            <h3 class="card-h3">초경량·고성능 AI</h3>
+            <p class="card-body">독자 초경량화 기술로 AI의 크기는 줄이고 성능은 높였습니다. 더 빠른 추론과 더 낮은 인프라 비용으로 기업 AI의 새로운 기준을 제시합니다.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="glass-card reveal-up" style="--delay:0.2s" aria-label="Domain-Specialized sLLM">
+            <div class="card-icon-wrap purple-glow">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <circle cx="16" cy="8" r="3" stroke="#A855F7" stroke-width="1.5"/>
+                <circle cx="6" cy="22" r="3" stroke="#A855F7" stroke-width="1.5"/>
+                <circle cx="26" cy="22" r="3" stroke="#A855F7" stroke-width="1.5"/>
+                <circle cx="16" cy="22" r="3" stroke="#A855F7" stroke-width="1.5"/>
+                <line x1="16" y1="11" x2="16" y2="19" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="2 2"/>
+                <line x1="13.5" y1="10" x2="7.5" y2="20" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="2 2"/>
+                <line x1="18.5" y1="10" x2="24.5" y2="20" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="2 2"/>
+                <circle cx="16" cy="8" r="1.5" fill="#A855F7" opacity="0.6"/>
+              </svg>
+            </div>
+            <span class="card-badge badge-purple">Industry-Tuned</span>
+            <h3 class="card-h3">비즈니스를 이해하는 특화 sLLM</h3>
+            <p class="card-body">금융, 보험, 제조, 공공 분야의 전문 지식을 학습한 sLLM으로 현업에 최적화된 AI 경험을 제공합니다.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="glass-card reveal-up" style="--delay:0.3s" aria-label="Multimodal Intelligence">
+            <div class="card-icon-wrap blue-glow">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <circle cx="12" cy="16" r="8" stroke="#5B7FFF" stroke-width="1.5" opacity="0.8"/>
+                <circle cx="20" cy="16" r="8" stroke="#5B7FFF" stroke-width="1.5" opacity="0.8"/>
+                <path d="M16 8.72a8 8 0 010 14.56" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="card-badge badge-blue">4 Modalities</span>
+            <h3 class="card-h3">멀티 모달 인텔리전스</h3>
+            <p class="card-body">텍스트, 음성, 문서, 이미지 등 다양한 데이터를 하나의 통합 엔진으로 한번에 분석하는 독자 AI 엔진을 제공합니다.</p>
+          </article>
+        </div>
+
+        <!-- Stat Counters -->
+        <div class="stats-row reveal-up" style="--delay:0.4s" aria-label="Key statistics">
+          <div class="stat-item">
+            <div class="stat-value" data-target="100" data-suffix="%">0%</div>
+            <div class="stat-label">Software-Based</div>
+          </div>
+          <div class="stat-sep" aria-hidden="true"></div>
+          <div class="stat-item">
+            <div class="stat-value" data-prefix="<" data-target="5" data-suffix="ms">&lt;5ms</div>
+            <div class="stat-label">Real-Time Processing</div>
+          </div>
+          <div class="stat-sep" aria-hidden="true"></div>
+          <div class="stat-item">
+            <div class="stat-value" data-target="70" data-suffix="%" data-down="true">0%</div>
+            <div class="stat-label">Infrastructure Cost ↓</div>
+          </div>
+          <div class="stat-sep" aria-hidden="true"></div>
+          <div class="stat-item">
+            <div class="stat-value">High</div>
+            <div class="stat-label">Compression Ratio</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: TECHNOLOGY ===== -->
+    <section id="technology" class="section tech-section" aria-labelledby="tech-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-label">Technology</p>
+          <h2 id="tech-title" class="section-h2">독자적 AI 기술로 가치를 구현합니다</h2>
+          <p class="section-sub">퀀텀에이아이가 독자적으로 구축한 자체 초경량 언어모델. 고가 서버 / 고사양 GPU 없이도 기존 내부 인프라에서 빠르고 가볍게 구동 가능합니다.</p>
+        </div>
+
+        <!-- Tech Tabs -->
+        <div class="tech-tabs-nav reveal-up" role="tablist" aria-label="Technology tabs">
+          <button class="tech-tab active" role="tab" aria-selected="true" aria-controls="tab-jeffri" id="tab-btn-jeffri">Jeffri(qLLM)</button>
+          <button class="tech-tab" role="tab" aria-selected="false" aria-controls="tab-data2vec" id="tab-btn-data2vec">Data2Vec</button>
+          <button class="tech-tab" role="tab" aria-selected="false" aria-controls="tab-compression" id="tab-btn-compression">Quantum Quant™</button>
+        </div>
+
+        <!-- TAB PANEL 1: Jeffri -->
+        <div id="tab-jeffri" class="tech-panel active" role="tabpanel" aria-labelledby="tab-btn-jeffri">
+          <div class="tech-panel-header">
+            <div class="tech-brand-badge">
+              <span class="tech-brand-name shimmer-text">Jeffri™</span>
+              <span class="tech-brand-sub">Mamba 기반 SSM 아키텍처 및 Jeffri(qLLM)</span>
+            </div>
+            <span class="status-badge" style="display:none;"><span class="status-dot"></span>Production Ready</span>
+          </div>
+          <div class="tech-panel-body jeffri-body">
+            <div class="tech-left">
+              <p class="tech-description">
+                연산 복잡도를 획기적으로 줄인 차세대 아키텍처와 도메인에 특화된 자체 초경량 모델(Jeffri)로 무거운 GPU 장비 없이도 빠르고 효율적인 자연어 처리를 지원합니다.
+              </p>
+              <ul class="capability-list" aria-label="Jeffri capabilities">
+                <li><span class="cap-icon">✦</span> 초고속 추론 속도 (Sub-5ms Response)</li>
+                <li><span class="cap-icon">✦</span> 완벽한 보안의 폐쇄망 구축 (Private &amp; On-Premise)</li>
+                <li><span class="cap-icon">✦</span> 고효율 도메인 최적화 (Adaptation without Full Retraining)</li>
+                <li><span class="cap-icon">✦</span> 저사양 장비 AI 구동 지원 (Edge AI Support)</li>
+                <li><span class="cap-icon">✦</span> 혁신적인 인프라 비용 절감 (90% Cost ↓)</li>
+              </ul>
+            </div>
+            <div class="tech-right">
+              <div class="neural-viz neural-viz-img" aria-label="Jeffri 아키텍처 시각화">
+                <img src="img/jeffri-architecture.png" alt="Jeffri qLLM 아키텍처" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB PANEL 2: Data2Vec -->
+        <div id="tab-data2vec" class="tech-panel" role="tabpanel" aria-labelledby="tab-btn-data2vec" hidden>
+          <div class="tech-panel-header">
+            <div class="tech-brand-badge">
+              <span class="tech-brand-name shimmer-text blue-shimmer">Data2Vec™</span>
+              <span class="tech-brand-sub">모든 데이터 형식의 경계를 허무는 자체 LLM 기반 멀티모달 통합 엔진</span>
+            </div>
+          </div>
+          <div class="tech-panel-body data2vec-body">
+            <div class="tech-left">
+              <p class="tech-description">
+                음성, 텍스트, 이미지 등 서로 다른 형태의 정보를 단일 엔진으로 빠르고 매끄럽게 인지합니다. 개별적인 여러 개의 엔진을 구축할 필요 없이 다양한 형태의 정보를 단 하나의 엔진에서 복합·인지하여 한번에 처리하는 독자적 기술입니다.
+              </p>
+              <div class="data2vec-flow" aria-label="Data2Vec processing flow">
+                <div class="flow-inputs">
+                  <div class="flow-input-item">
+                    <span class="flow-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                    <span>음성</span>
+                  </div>
+                  <div class="flow-input-item">
+                    <span class="flow-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 6h14M5 10h14M5 14h10M5 18h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                    <span>텍스트</span>
+                  </div>
+                  <div class="flow-input-item">
+                    <span class="flow-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="10" r="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 17l4.5-4.5L13 16l2.5-2.5L20 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    <span>이미지</span>
+                  </div>
+                </div>
+                <div class="flow-arrow-col" aria-hidden="true">
+                  <div class="flow-arrow-lines">
+                    <span class="flow-line"></span>
+                    <span class="flow-line"></span>
+                    <span class="flow-line"></span>
+                    <span class="flow-line"></span>
+                  </div>
+                  <div class="flow-arrow-tip">→</div>
+                </div>
+                <div class="flow-core">
+                  <div class="flow-core-inner">
+                    <span class="shimmer-text blue-shimmer">Data2Vec™</span>
+                    <span style="color:var(--text-secondary);font-size:12px;">Core Engine</span>
+                  </div>
+                </div>
+                <div class="flow-arrow-right" aria-hidden="true">→</div>
+                <div class="flow-output">
+                  <div class="flow-output-inner">
+                    <span class="output-title">지능형 통합 레이어</span>
+                    <div class="output-tags">
+                      <span>Semantic Search</span>
+                      <span>Cross-modal QA</span>
+                      <span>Insight Extraction</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tech-right">
+              <div class="use-case-tiles">
+                <h4 style="color:var(--text-secondary);font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;">Cross-Modal Applications</h4>
+                <div class="use-case-grid">
+                  <div class="use-case-tile">
+                    <span class="use-icon" style="color:var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+                    <strong>Voice → Insight</strong>
+                    <p>음성 상담 기록을 구조화된 데이터로 분석</p>
+                  </div>
+                  <div class="use-case-tile">
+                    <span class="use-icon" style="color:var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 20h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="7.5" y="12" width="3" height="5" rx="0.5" stroke="currentColor" stroke-width="1.5"/><rect x="13" y="8" width="3" height="9" rx="0.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                    <strong>Doc → Knowledge</strong>
+                    <p>데이터를 검색 가능한 지능형 자산으로 변환</p>
+                  </div>
+                  <div class="use-case-tile">
+                    <span class="use-icon" style="color:var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="8" width="14" height="11" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 5v3M9 4.5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="9.5" cy="13" r="1.2" fill="currentColor"/><circle cx="14.5" cy="13" r="1.2" fill="currentColor"/></svg></span>
+                    <strong>Image → Data</strong>
+                    <p>시각적 데이터를 정형화된 메타 데이터로 변환</p>
+                  </div>
+                  <div class="use-case-tile">
+                    <span class="use-icon" style="color:var(--color-primary);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 3L5 13h6l-1 8 8-10h-6l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+                    <strong>Unified Query</strong>
+                    <p>모든 데이터 형식의 통합 질의/분석</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB PANEL 3: Compression -->
+        <div id="tab-compression" class="tech-panel" role="tabpanel" aria-labelledby="tab-btn-compression" hidden>
+          <div class="tech-panel-header">
+            <div class="tech-brand-badge">
+              <span class="tech-brand-name shimmer-text green-shimmer">Quantum Quant™</span>
+              <span class="tech-brand-sub">혁신적 AI 경량화를 완성하는 차세대 초압축 기술 (Ultra-Compression)</span>
+            </div>
+            <span class="status-badge" style="display:none;"><span class="status-dot green-dot"></span>초압축(Ultra-Compression)</span>
+          </div>
+          <div class="tech-panel-body compression-body">
+            <p class="tech-description" style="margin-bottom:24px;">막대한 연산 자원이 필요한 AI 모델의 크기를 성능 저하 없이 대폭 압축하여 메모리 사용량과 연산 비용을 최소화하고 프라이빗 AI 구동을 지원하는 독자적 초압축 기술입니다.</p>
+            <div class="compression-viz ba-viz ba-viz-img" aria-label="Quantum Quant™ 경량화 비교 (BEFORE / AFTER)">
+              <img src="img/quantum-quant.png" alt="Quantum Quant™ BEFORE/AFTER 경량화 비교" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: SERVICES ===== -->
+    <section id="services" class="section services-section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-label">Platform Service</p>
+          <h2 id="services-title" class="section-h2">바로 적용 가능한 AI로 비즈니스를 혁신합니다</h2>
+          <p class="section-sub">초압축 · 초경량 AI 기술 기반, 데이터 자산화부터 지능형 소통까지 아우르는 <br>핵심 플랫폼 라인업을 보유하고 있습니다.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- Service 1: AICC -->
+          <article class="service-card glass-card reveal-up" style="--delay:0.1s" aria-label="AI Contact Center">
+            <div class="service-card-top">
+              <div class="service-icon-wrap cyan-glow">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <path d="M14 2C9.03 2 5 6.03 5 11v4a3 3 0 003 3h1v-6H8c0-3.31 2.69-6 6-6s6 2.69 6 6h-1v6h1a3 3 0 003-3v-4c0-4.97-4.03-9-9-9z" fill="#00D4FF" opacity="0.8"/>
+                  <rect x="11" y="21" width="6" height="3" rx="1.5" fill="#00D4FF" opacity="0.5"/>
+                </svg>
+              </div>
+              <span class="service-badge badge-cyan">100% Software-Based</span>
+            </div>
+            <h3 class="card-h3">지능형 고객 소통 플랫폼 (sooni AICC)</h3>
+            <p class="card-body">기업이 복잡한 컨택센터 구축 부담 없이 빠르게 고객 응대 품질과 운영 효율을 높일 수 있도록 지원합니다. 음성·상담 데이터를 실시간으로 활용해 고객 경험을 개선하고, 상담사의 업무 생산성과 기업의 서비스 경쟁력을 동시에 강화합니다.</p>
+            <ul class="service-features" aria-label="AICC features">
+              <li><span class="feat-dot cyan-dot"></span>멀티모달 통합 엔진 Data2Vec</li>
+              <li><span class="feat-dot cyan-dot"></span>Mamba 기반 자체 초경량 모델 (Jeffri / qLLM)</li>
+              <li><span class="feat-dot cyan-dot"></span>실시간 패킷 기반 E2E 음성 처리 (QIVP)</li>
+              <li><span class="feat-dot cyan-dot"></span>지능형 발화 의미 판단 및 노이즈 캔슬링</li>
+            </ul>
+            <div class="svc-tag-row">
+              <span class="svc-tag">#Data2Vec</span>
+              <span class="svc-tag">#qLLM</span>
+            </div>
+            <div class="svc-dummy-img" aria-label="sooni AICC 샘플화면" style="display:none;"></div>
+            <div class="service-dashboard svc-preview" data-modal="modal-sooni" role="button" tabindex="0" aria-label="Dashboard preview">
+              <div class="dashboard-bar">
+                <span class="dash-dot red"></span>
+                <span class="dash-dot yellow"></span>
+                <span class="dash-dot green"></span>
+                <span class="dash-url">sooni-aicc.app — 실시간 대시보드</span>
+              </div>
+              <div class="dashboard-img-wrap">
+                <img src="img/sooni-dashboard.png" alt="sooni AICC 실시간 대시보드" loading="lazy" />
+              </div>
+            </div>
+            <button class="svc-view-btn" data-modal="modal-sooni" type="button">Details &gt;</button>
+          </article>
+
+          <!-- Service 2: qeepi -->
+          <article class="service-card glass-card reveal-up" style="--delay:0.2s" aria-label="Enterprise Data Assetization">
+            <div class="service-card-top">
+              <div class="service-icon-wrap purple-glow">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <ellipse cx="14" cy="7" rx="9" ry="3.5" stroke="#A855F7" stroke-width="1.5"/>
+                  <path d="M5 7v7c0 1.93 4.03 3.5 9 3.5s9-1.57 9-3.5V7" stroke="#A855F7" stroke-width="1.5"/>
+                  <path d="M5 14v7c0 1.93 4.03 3.5 9 3.5s9-1.57 9-3.5v-7" stroke="#A855F7" stroke-width="1.5" opacity="0.5"/>
+                </svg>
+              </div>
+              <span class="service-badge badge-purple">Data Integration</span>
+            </div>
+            <h3 class="card-h3">데이터 플랫폼 (qeepi)</h3>
+            <p class="card-body">기업 내 비정형 데이터를 디지털 자산으로 전환하는 AI 기반 콘텐츠 플랫폼입니다. 문서 수집부터 이해·구조화·활용까지 전 과정 통합 지원으로 업무 효율 제고 및 기업의 지식 자산의 서비스의 기반을 제공합니다.</p>
+            <ul class="service-features" aria-label="qeepi features">
+              <li><span class="feat-dot cyan-dot"></span>데이터 End-to-End 통합 처리 및 전처리 자동화</li>
+              <li><span class="feat-dot cyan-dot"></span>정보의 자산화 및 지능형 검색·답변 생성을 통한 지식화</li>
+              <li><span class="feat-dot cyan-dot"></span>파이프라인 및 커넥터를 통한 쉬운 원천 시스템 연결</li>
+              <li><span class="feat-dot cyan-dot"></span>초경량 아키텍처를 통한 인프라 효율화</li>
+            </ul>
+            <div class="svc-tag-row">
+              <span class="svc-tag">#QIDP</span>
+              <span class="svc-tag">#Data2Vec</span>
+            </div>
+            <div class="service-dashboard svc-preview" data-modal="modal-qeepi" role="button" tabindex="0" aria-label="qeepi 문서 플랫폼 미리보기">
+              <div class="dashboard-bar">
+                <span class="dash-dot red"></span>
+                <span class="dash-dot yellow"></span>
+                <span class="dash-dot green"></span>
+                <span class="dash-url">qeepi.app — 문서 자산화 플랫폼</span>
+              </div>
+              <div class="dashboard-img-wrap">
+                <img src="img/qeepi-dashboard.png" alt="qeepi 문서 자산화 플랫폼 대시보드" loading="lazy" />
+              </div>
+            </div>
+            <button class="svc-view-btn" data-modal="modal-qeepi" type="button">Details &gt;</button>
+          </article>
+
+          <!-- Service 3: claimi -->
+          <article class="service-card glass-card reveal-up" style="--delay:0.3s" aria-label="claimi">
+            <div class="service-card-top">
+              <div class="service-icon-wrap blue-glow">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <rect x="5" y="4" width="18" height="20" rx="2" stroke="#5B7FFF" stroke-width="1.5"/>
+                  <line x1="9" y1="10" x2="19" y2="10" stroke="#5B7FFF" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="9" y1="14" x2="19" y2="14" stroke="#5B7FFF" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="9" y1="18" x2="15" y2="18" stroke="#5B7FFF" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="22" cy="22" r="5" fill="#00D4FF" opacity="0.9"/>
+                  <path d="M20 22l1.5 1.5L24 20" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="service-badge badge-blue">#EDI 표준화 #sLLM</span>
+            </div>
+            <h3 class="card-h3">보험 자동화 플랫폼 (claimi)</h3>
+            <p class="card-body">복잡한 보험금 청구 업무를 이해하고 지원하는 AI 플랫폼입니다. 접수부터 서류 분석, 심사, 지급까지 청구 전 과정을 자동화하여 처리 속도와 정확도를 동시에 높입니다.</p>
+            <ul class="service-features" aria-label="claimi features">
+              <li><span class="feat-dot cyan-dot"></span>비정형 청구 서류 자동 인식 및 데이터화</li>
+              <li><span class="feat-dot cyan-dot"></span>생성형 AI 기반 심사 자동화 및 지급액 산출</li>
+              <li><span class="feat-dot cyan-dot"></span>과잉진료 및 보험사기(FDS) 탐지와 예방</li>
+              <li><span class="feat-dot cyan-dot"></span>민감 정보 보안 유지 및 기존 코어 시스템과의 유연한 연동</li>
+            </ul>
+            <div class="svc-tag-row">
+              <span class="svc-tag">#EDI 표준화</span>
+              <span class="svc-tag">#sLLM</span>
+            </div>
+            <div class="service-dashboard svc-preview" data-modal="modal-claimq" role="button" tabindex="0" aria-label="claimi 보험 심사 미리보기">
+              <div class="dashboard-bar">
+                <span class="dash-dot red"></span>
+                <span class="dash-dot yellow"></span>
+                <span class="dash-dot green"></span>
+                <span class="dash-url">claim-q.app — 보험 자동화 플랫폼</span>
+              </div>
+              <div class="dashboard-img-wrap">
+                <img src="img/claimq-review.png" alt="claimi 심사 상세 화면" loading="lazy" />
+              </div>
+            </div>
+            <button class="svc-view-btn" data-modal="modal-claimq" type="button">Details &gt;</button>
+          </article>
+
+          <!-- Service 4: AI-Agent -->
+          <article class="service-card glass-card reveal-up" style="--delay:0.4s" aria-label="AI-Agent">
+            <div class="service-card-top">
+              <div class="service-icon-wrap purple-glow">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                  <circle cx="14" cy="10" r="5" stroke="#A855F7" stroke-width="1.5"/>
+                  <path d="M7 24c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="#A855F7" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="22" cy="8" r="3" stroke="#00D4FF" stroke-width="1.2"/>
+                  <path d="M22 6v2l1.2 1" stroke="#00D4FF" stroke-width="1" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="service-badge badge-purple">#RAG #HITL #No-code</span>
+            </div>
+            <h3 class="card-h3">AI-Agent 플랫폼</h3>
+            <p class="card-body">사용자의 의도를 이해하고 목표 달성을 위해 스스로 판단·실행하는 지능형 업무 파트너로 일상 업무를 비롯해 상담 과정에서 필요한 업무 Agent를 직접 생성하여 사용할 수 있는 지능형 업무 지원 솔루션입니다.</p>
+            <ul class="service-features" aria-label="AI-Agent features">
+              <li><span class="feat-dot cyan-dot"></span>자율 에이전트가 목표 구조화 및 반복 실행으로 복잡한 작업 자동화</li>
+              <li><span class="feat-dot cyan-dot"></span>외부 API·데이터베이스·서드파티 서비스 등 다양한 도구의 유연한 연동</li>
+              <li><span class="feat-dot cyan-dot"></span>행동 로그와 성능 피드백을 통한 학습·튜닝으로 지속적인 성능 개선</li>
+              <li><span class="feat-dot cyan-dot"></span>노코드(No-code) 기반 현업 주도 '에이전트 스튜디오(Agent Studio)' 제공</li>
+            </ul>
+            <div class="svc-tag-row">
+              <span class="svc-tag">#RAG</span>
+              <span class="svc-tag">#HITL</span>
+              <span class="svc-tag">#No-code</span>
+            </div>
+            <div class="service-dashboard svc-preview" data-modal="modal-agent" role="button" tabindex="0" aria-label="AI-Agent 업무 자동화 미리보기">
+              <div class="dashboard-bar">
+                <span class="dash-dot red"></span>
+                <span class="dash-dot yellow"></span>
+                <span class="dash-dot green"></span>
+                <span class="dash-url">agent-studio.app — AI Agent 플랫폼</span>
+              </div>
+              <div class="dashboard-img-wrap">
+                <img src="img/agent-main.png" alt="AI-Agent 메인화면" loading="lazy" />
+              </div>
+            </div>
+            <button class="svc-view-btn" data-modal="modal-agent" type="button">Details &gt;</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICE MODALS ===== -->
+    <div class="svc-modal-overlay" id="svc-modal-overlay" role="dialog" aria-modal="true" aria-label="서비스 샘플화면" hidden>
+      <div class="svc-modal-box">
+        <button class="svc-modal-close" id="svc-modal-close" aria-label="닫기">✕</button>
+        <div class="svc-modal-content" id="svc-modal-content">
+          <!-- 모달 내용이 JS로 주입됩니다 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SECTION 5: REFERENCES ===== -->
+    <!--
+      로고 교체 안내:
+      - 각 .logo-box는 추후 실제 로고 이미지로 교체할 수 있도록 data-logo 속성을 비워둠.
+      - 이미지 준비 시: data-logo="img/logos/파일명.png" 형태로 경로만 넣으면
+        아래 .logo-box img 스타일이 자동 적용됨. 텍스트 placeholder는 제거하거나 alt로 활용.
+      - 예) <div class="logo-box"><img src="img/logos/shinhan.png" alt="신한은행"></div>
+    -->
+    <section id="references" class="section references-section" aria-labelledby="ref-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-label">REFERENCE</p>
+          <h2 id="ref-title" class="section-h2">많은 고객들이 함께하고 있습니다</h2>
+        </div>
+
+        <!-- Logo Wall : 4 Categories -->
+        <div class="logo-wall reveal-up" aria-label="Client logos">
+
+          <!-- 금융 -->
+          <div class="logo-category">
+            <span class="logo-cat-label cat-finance">금융</span>
+            <div class="logo-row">
+              <div class="logo-box" data-logo="img/shinhan.png"><span class="logo-name">신한은행</span></div>
+              <div class="logo-box" data-logo="img/shinhanFG.png"><span class="logo-name">신한금융그룹</span></div>
+              <div class="logo-box" data-logo="img/IBK_logo.png"><span class="logo-name">IBK기업은행</span></div>
+              <div class="logo-box" data-logo="img/woori_logo.png"><span class="logo-name">우리은행</span></div>
+              <div class="logo-box" data-logo="img/NH.png"><span class="logo-name">NH농협은행</span></div>
+              <div class="logo-box" data-logo="img/BNK_logo.png"><span class="logo-name">BNK부산은행</span></div>
+              <div class="logo-box" data-logo="img/Sh-logo.png"><span class="logo-name">Sh수협은행</span></div>
+              <div class="logo-box" data-logo="img/KB_card_logo.png"><span class="logo-name">KB국민카드</span></div>
+              <div class="logo-box" data-logo="img/Lottecard.png"><span class="logo-name">롯데카드</span></div>
+              <div class="logo-box" data-logo="img/Kb_ecu_logo.png"><span class="logo-name">KB증권</span></div>
+            </div>
+          </div>
+
+          <!-- 보험 -->
+          <div class="logo-category">
+            <span class="logo-cat-label cat-insurance">보험</span>
+            <div class="logo-row">
+              <div class="logo-box" data-logo="img/Hanwha_insur.png"><span class="logo-name">한화손해보험</span></div>
+              <div class="logo-box" data-logo="img/DB_logo.png"><span class="logo-name">DB손해보험</span></div>
+              <div class="logo-box" data-logo="img/Lotte_insurance.png"><span class="logo-name">롯데손해보험</span></div>
+              <div class="logo-box" data-logo="img/MG_insurance.png"><span class="logo-name">MG손해보험</span></div>
+              <div class="logo-box" data-logo="img/Kyobo_life.png"><span class="logo-name">교보라이프플래닛생명</span></div>
+              <div class="logo-box" data-logo="img/KDB_logo.png"><span class="logo-name">KDB생명</span></div>
+              <div class="logo-box" data-logo="img/heungkuk_logo.png"><span class="logo-name">흥국생명</span></div>
+            </div>
+          </div>
+
+          <!-- 공공 -->
+          <div class="logo-category">
+            <span class="logo-cat-label cat-public">공공</span>
+            <div class="logo-row">
+              <div class="logo-box logo-box--lg" data-logo="img/nipa.png"><span class="logo-name">정보통신산업진흥원</span></div>
+              <div class="logo-box logo-box--lg" data-logo="img/mogef.png"><span class="logo-name">여성가족부</span></div>
+              <div class="logo-box logo-box--lg" data-logo="img/kids_logo.png"><span class="logo-name">한국의약품안전관리원</span></div>
+            </div>
+          </div>
+
+          <!-- 일반 -->
+          <div class="logo-category">
+            <span class="logo-cat-label cat-enterprise">일반</span>
+            <div class="logo-row">
+              <div class="logo-box" data-logo="img/IBM_logo.png"><span class="logo-name">IBM</span></div>
+              <div class="logo-box" data-logo="img/sk_logo.png"><span class="logo-name">SK telecom</span></div>
+              <div class="logo-box" data-logo="img/emart.png"><span class="logo-name">emart</span></div>
+              <div class="logo-box logo-box--invert" data-logo="img/emart_treaders_logo.png"><span class="logo-name">이마트 트레이더스</span></div>
+              <div class="logo-box" data-logo="img/noBrand.png"><span class="logo-name">No Brand</span></div>
+              <div class="logo-box" data-logo="img/parking_go_logo.png"><span class="logo-name">ParkingGo</span></div>
+              <div class="logo-box" data-logo="img/miracell.png"><span class="logo-name">Miracell</span></div>
+              <div class="logo-box" data-logo="img/btb_logo.png"><span class="logo-name">BTB KOREA</span></div>
+              <div class="logo-box" data-logo="img/gansam.png"><span class="logo-name">Gansam</span></div>
+              <div class="logo-box" data-logo="img/TNH_logo.png" style="--logo-scale:0.85;"><span class="logo-name">TNH</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== SECTION 6: CONTACT ===== -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-label">Contact</p>
+        </div>
+
+        <div class="contact-grid reveal-up">
+          <!-- Left: Info -->
+          <div class="contact-info" aria-label="Contact information">
+            <div class="contact-info-heading">
+              <h2 id="contact-title" class="contact-h2">이제 함께<br>시작할 차례입니다</h2>
+              <p class="contact-sub">서비스·도입·기술 문의를 남겨주시면<br>담당자가 빠르게 연락드립니다.</p>
+            </div>
+            <div class="contact-info-cards">
+              <div class="contact-info-card">
+                <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div>
+                  <div class="contact-info-label">이메일</div>
+                  <a href="mailto:quantumai@quantum-ai.ai" class="contact-info-value">quantumai@quantum-ai.ai</a>
+                </div>
+              </div>
+              <div class="contact-info-card">
+                <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+                <div>
+                  <div class="contact-info-label">전화</div>
+                  <a href="tel:+8226408-0915" class="contact-info-value">02-6408-0915</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-value-prop">
+              <div class="value-prop-badges">
+                <span class="vp-badge">sooni AICC</span>
+                <span class="vp-badge">qeepi</span>
+                <span class="vp-badge">claimi</span>
+                <span class="vp-badge">AI-Agent</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact-form-wrap">
+            <h3 class="form-section-title" style="color:var(--text-primary);font-size:18px;font-weight:600;margin-bottom:20px;">영업 상담 신청</h3>
+            <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="company-name" class="form-label">회사명 <span aria-hidden="true">*</span></label>
+                  <input type="text" id="company-name" name="company" class="form-input" placeholder="회사명 입력" required aria-required="true" autocomplete="organization" />
+                </div>
+                <div class="form-group">
+                  <label for="your-name" class="form-label">성함 <span aria-hidden="true">*</span></label>
+                  <input type="text" id="your-name" name="name" class="form-input" placeholder="이름 입력" required aria-required="true" autocomplete="name" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="business-email" class="form-label">이메일 <span aria-hidden="true">*</span></label>
+                  <input type="email" id="business-email" name="email" class="form-input" placeholder="name@company.com" required aria-required="true" autocomplete="email" />
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">연락처</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="010-0000-0000" autocomplete="tel" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="industry" class="form-label">관심 솔루션 <span aria-hidden="true">*</span></label>
+                <input type="text" id="industry" name="industry" class="form-input" placeholder="관심솔루션명 (자유 입력)" required aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">문의 내용</label>
+                <textarea id="message" name="message" class="form-input form-textarea" rows="4" placeholder="도입 환경, 일정, 궁금하신 점을 자유롭게 적어주세요."></textarea>
+              </div>
+              <div class="form-group form-privacy-check" style="display:flex;align-items:flex-start;gap:8px;margin-bottom:16px;">
+                <input type="checkbox" id="privacy-agree" name="privacy" required style="margin-top:3px;flex-shrink:0;" />
+                <label for="privacy-agree" style="color:var(--text-secondary);font-size:13px;cursor:pointer;">개인정보 수집·이용에 동의합니다. (상담 목적 외 사용하지 않습니다)</label>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                  신청 보내기
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 신청 완료 팝업 -->
+    <div class="form-success-overlay" id="form-success-overlay" role="dialog" aria-modal="true" aria-label="신청 완료" hidden>
+      <div class="form-success-box">
+        <button class="form-success-close" id="form-success-close" aria-label="닫기" type="button">✕</button>
+        <div class="form-success" aria-live="polite">
+          <span class="success-icon">✓</span>
+          <h4>Inquiry Sent Successfully</h4>
+          <p>Our enterprise team will respond within one business day.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <!-- 왼쪽: 로고 + 회사 정보 -->
+        <div class="footer-brand">
+          <a href="#" class="nav-logo" aria-label="Home">
+            <img src="img/logo.svg" alt="Quantum AI" style="height:28px;width:auto;display:block;filter:brightness(0) invert(1);" />
+          </a>
+          <p class="footer-info">
+            <strong>㈜퀀텀에이아이</strong><br>
+            사업자등록번호&nbsp;&nbsp;760-87-02192&nbsp;&nbsp;|&nbsp;&nbsp;대표&nbsp;&nbsp;최성집<br>
+            주소&nbsp;&nbsp;서울특별시 중구 퇴계로 286 9층(쌍림동, 쌍림빌딩) 퀀텀에이아이<br>
+            전화번호&nbsp;&nbsp;<a href="tel:+82264080915">02-6408-0915</a>&nbsp;&nbsp;|&nbsp;&nbsp;이메일&nbsp;&nbsp;<a href="mailto:quantumai@quantum-ai.ai">quantumai@quantum-ai.ai</a>
+          </p>
+        </div>
+        <!-- 오른쪽: 링크 + SNS -->
+        <div class="footer-links-col">
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="https://quantum-ai.ai/resource/documents/Quantum%20AI%20Company%20Brief%202025_3Q.pdf" class="footer-link" target="_blank" rel="noopener">회사소개서 다운로드</a>
+            <a href="privacy.html" class="footer-link">개인정보처리방침</a>
+            <span class="footer-link footer-link--disabled">인재 채용</span>
+          </nav>
+          <div class="footer-sns" aria-label="SNS">
+            <a href="https://www.linkedin.com/in/%EC%97%90%EC%9D%B4%EC%95%84%EC%9D%B4-%ED%80%80%ED%85%80-27a622251/" class="sns-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.facebook.com/QuantumAGI" class="sns-icon" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/qtai_mktg/" class="sns-icon" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://blog.naver.com/quantumagi" class="sns-icon" target="_blank" rel="noopener" aria-label="Naver Blog">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.273 12.845L7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727z"/></svg>
+            </a>
+            <a href="https://www.nextunicorn.kr/company/728b73e74ef54a0b" class="sns-icon" target="_blank" rel="noopener" aria-label="Next Unicorn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">ⓒ 2022-2026 Quantum AI Corp. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 모듈(전역 init 정의) — classic script 라 file:// 직접 열기에서도 동작. type="module" 금지! -->
+  <script src="js/modules/loader.js"></script>
+  <script src="js/modules/particles.js"></script>
+  <script src="js/modules/navigation.js"></script>
+  <script src="js/modules/scroll-reveal.js"></script>
+  <script src="js/modules/counters.js"></script>
+  <script src="js/modules/tech-tabs.js"></script>
+  <script src="js/modules/contact-form.js"></script>
+  <script src="js/modules/card-glow.js"></script>
+  <script src="js/modules/compression-animation.js"></script>
+  <script src="js/modules/neural-animation.js"></script>
+  <script src="js/modules/active-nav.js"></script>
+  <script src="js/modules/animation-pause.js"></script>
+  <script src="js/modules/logo-wall.js"></script>
+  <script src="js/modules/parallax-glow.js"></script>
+  <script src="js/modules/tech-reveal.js"></script>
+  <script src="js/modules/capability-stagger.js"></script>
+  <script src="js/modules/focus-trap.js"></script>
+  <script src="js/modules/cube-animation.js"></script>
+  <script src="js/modules/hero-quantum.js"></script>
+  <script src="js/modules/service-cards.js"></script>
+  <script src="js/modules/service-modal.js"></script>
+  <script src="js/modules/reference-logos.js"></script>
+  <!-- 엔트리: 위 init 들을 원래 순서대로 호출 (반드시 마지막) -->
+  <script src="js/main.js"></script>
+</body>
+</html>

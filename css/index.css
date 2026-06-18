@@ -1,0 +1,25 @@
+/* ============================================================
+   quantumAI-intro — 스타일 엔트리
+   로드 순서: 토큰 → base → 컴포넌트/섹션. index.html 은 이 파일만 링크.
+   cascade 순서는 원본 style.css 의 섹션 등장 순서를 그대로 따른다.
+   ============================================================ */
+@import "tokens.css";
+@import "base.css";
+@import "components/button.css";
+@import "components/card.css";
+@import "components/effects.css";
+@import "components/nav.css";
+@import "sections/hero.css";
+@import "sections/why.css";
+@import "sections/technology.css";
+@import "sections/services.css";
+@import "sections/references.css";
+@import "sections/contact.css";
+@import "components/footer.css";
+@import "components/global.css";
+@import "components/responsive.css";
+@import "components/loader.css";
+@import "components/misc.css";
+@import "sections/hero-quantum.css";
+@import "sections/services-extra.css";
+@import "sections/company.css";

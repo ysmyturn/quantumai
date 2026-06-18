@@ -1,0 +1,218 @@
+/* components/nav.css — 내비게이션 */
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+#navbar.scrolled {
+  background: rgba(5, 8, 22, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-badge {
+  font-size: 13px;
+  color: var(--color-accent);
+  margin-top: -8px;
+  -webkit-text-fill-color: var(--color-accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+  transform-origin: left;
+}
+
+.nav-link:hover,
+.nav-link.active      { color: var(--text-primary); }
+.nav-link:hover::after,
+.nav-link.active::after { transform: scaleX(1); }
+.nav-link:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; border-radius: 2px; }
+
+/* GNB 구분선 — 본 메뉴와 Company 메뉴 사이 (버티컬바) */
+.nav-divider {
+  width: 1px;
+  height: 16px;
+  background: var(--text-secondary);
+  margin: 0 6px;
+}
+
+/* Company 메뉴 — 다른 GNB 메뉴와 동일한 컬러 */
+.nav-link-alt {
+  color: var(--text-secondary);
+}
+.nav-link-alt:hover { color: var(--text-primary); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile Drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  background: rgba(10, 15, 44, 0.98);
+  backdrop-filter: blur(20px);
+  border-left: 1px solid var(--border-glass);
+  z-index: 1100;
+  padding: 80px 32px 32px;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+
+.drawer-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: var(--text-secondary);
+  font-size: 20px;
+  padding: 8px;
+  transition: color var(--transition);
+}
+.drawer-close:hover { color: var(--text-primary); }
+.drawer-close:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-badge); }
+
+.mobile-drawer ul { display: flex; flex-direction: column; gap: 8px; }
+
+.drawer-link {
+  display: block;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-glass);
+  transition: color var(--transition);
+}
+.drawer-link:hover { color: var(--text-primary); }
+.drawer-link:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: 2px; }
+
+/* 모바일 드로어 — Company 구분선 */
+.drawer-divider {
+  height: 1px;
+  background: var(--border-glass);
+  margin: 12px 0;
+  opacity: 0.6;
+}
+.drawer-link-alt {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.drawer-link-alt:hover { color: var(--text-primary); }
+
+/* 드로어 현재 위치 표시 */
+.drawer-link.drawer-active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.drawer-cta { margin-top: 24px; width: 100%; }
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1050;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.drawer-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+

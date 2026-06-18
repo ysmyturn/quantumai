@@ -1,0 +1,63 @@
+/* components/card.css — 글래스 카드 / 배지 / 아이콘 래퍼 */
+/* ─── GLASS CARD ─────────────────────────────────────────── */
+.glass-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.glass-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow-cyan);
+  transform: translateY(-4px);
+}
+
+/* ─── BADGES ─────────────────────────────────────────────── */
+.card-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: var(--radius-badge);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.badge-cyan  { background: rgba(0, 212, 255, 0.12); color: var(--color-primary); border: 1px solid rgba(0, 212, 255, 0.25); }
+.badge-purple { background: rgba(168, 85, 247, 0.12); color: var(--color-accent); border: 1px solid rgba(168, 85, 247, 0.25); }
+.badge-blue  { background: rgba(91, 127, 255, 0.12); color: var(--color-secondary); border: 1px solid rgba(91, 127, 255, 0.25); }
+.badge-green { background: rgba(16, 185, 129, 0.12); color: var(--color-success); border: 1px solid rgba(16, 185, 129, 0.25); }
+
+/* ─── ICON WRAPS ─────────────────────────────────────────── */
+.card-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cyan-glow   { background: rgba(0, 212, 255, 0.08); border: 1px solid rgba(0, 212, 255, 0.2); }
+.purple-glow { background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.2); }
+.blue-glow   { background: rgba(91, 127, 255, 0.08); border: 1px solid rgba(91, 127, 255, 0.2); }
+

@@ -1,0 +1,379 @@
+/* sections/services-extra.css — 서비스 카드 확장 / 대시보드 위젯 */
+/* ============================================================
+   SERVICE CARD — 태그 / 더미 이미지 / 화면조회 버튼 / 모달
+   ============================================================ */
+
+/* 태그 pill 행 */
+.svc-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 16px;
+}
+.svc-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  letter-spacing: .02em;
+}
+
+/* 더미 이미지 박스 */
+.svc-dummy-img {
+  width: 100%;
+  flex: 1 1 auto;          /* 남은 공간 채움 → 버튼을 카드 하단으로 밀어냄 */
+  min-height: 160px;
+  margin: 0 0 16px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svc-dummy-label {
+  color: rgba(255,255,255,.25);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 화면조회 버튼 — 기존 btn-glass 스타일 통일 */
+.svc-view-btn {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--border-glass);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: .02em;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition);
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.svc-view-btn:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow-cyan);
+  transform: translateY(-2px);
+}
+.svc-view-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* 카드 flex 구조 — 버튼이 항상 맨 아래 */
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 모달 오버레이 ── */
+.svc-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(0,0,0,.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.svc-modal-overlay[hidden] { display: none; }
+
+.svc-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #0e1628;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-card);
+  padding: 48px 44px 40px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.6);
+}
+
+.svc-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.5);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color .15s, background .15s;
+}
+.svc-modal-close:hover {
+  color: #fff;
+  background: rgba(255,255,255,.08);
+}
+
+/* 모달 내용 (placeholder) */
+.svc-modal-content {
+  color: rgba(255,255,255,.6);
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: center;
+  padding: 40px 0 24px;
+}
+.svc-modal-content .modal-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-right: 40px; /* 닫기 버튼 공간 */
+  min-height: 44px;
+}
+.svc-modal-content .modal-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+}
+.svc-modal-content .modal-screen-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-primary, #4B7AFF);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+.svc-modal-content .modal-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px dashed rgba(255,255,255,.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.22);
+  font-size: 14px;
+  margin: 20px 0 0;
+}
+.svc-modal-content .modal-img {
+  margin: 20px 0 0;
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 12px 40px rgba(0,0,0,.4);
+}
+/* 이미지가 들어가는 모달은 더 넓게 */
+.svc-modal-box.is-wide {
+  max-width: min(1320px, 94vw);
+  padding: 28px 28px 24px;
+}
+.svc-modal-box.is-wide .svc-modal-content {
+  padding: 8px 0 4px;
+}
+
+/* 다중 이미지 캐러셀 (fade 오토스핀) */
+.modal-carousel {
+  margin: 16px 0 0;
+}
+.carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1733 / 907;
+  max-height: 72vh;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 12px 40px rgba(0,0,0,.4);
+  background: #060a16;
+}
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0;
+  transition: opacity .8s ease;
+  pointer-events: none;
+}
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(255,255,255,.2);
+  transition: background .25s, transform .25s;
+}
+.carousel-dot:hover {
+  background: rgba(255,255,255,.4);
+}
+.carousel-dot.active {
+  background: var(--color-primary, #4B7AFF);
+  transform: scale(1.25);
+}
+
+/* 하단 컨트롤 행 (좌우 버튼 + 도트) */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 16px;
+}
+.carousel-controls .carousel-dots {
+  margin-top: 0;
+}
+
+/* 좌우 내비게이션 버튼 (이미지 밖 하단) */
+.carousel-nav {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background .2s, border-color .2s, transform .15s;
+}
+.carousel-nav:hover {
+  background: rgba(75,122,255,.7);
+  border-color: rgba(75,122,255,.9);
+}
+.carousel-nav:active {
+  transform: scale(.92);
+}
+.carousel-prev { padding-right: 3px; }
+.carousel-next { padding-left: 3px; }
+
+/* ESC / 오버레이 클릭 시 닫기 안내 */
+.svc-modal-esc-hint {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,.25);
+  margin-top: 20px;
+}
+
+/* ============================================================
+   qeepi / Claim-Q / AI-Agent 대시보드 위젯 스타일
+   ============================================================ */
+
+/* ── qeepi 문서 목록 ── */
+.qeepi-doc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 2px 0;
+}
+.qeepi-doc-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: rgba(255,255,255,.03);
+}
+.qeepi-doc-icon { font-size: 12px; flex-shrink: 0; }
+.qeepi-doc-name {
+  flex: 1;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.qeepi-doc-status { font-weight: 700; font-size: 10px; flex-shrink: 0; }
+
+/* 진행 바 */
+.qeepi-progress-track {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,.07);
+  overflow: hidden;
+  margin-top: 3px;
+}
+.qeepi-progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+}
+
+/* ── Claim-Q 청구 행 ── */
+.claimq-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: rgba(255,255,255,.03);
+  margin-bottom: 3px;
+}
+.claimq-id   { width: 52px; flex-shrink: 0; font-family: var(--font-mono); font-size: 10px; }
+.claimq-type { flex: 1; color: var(--text-secondary); }
+.claimq-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+/* ── AI-Agent 에이전트 행 ── */
+.agent-item-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background: rgba(255,255,255,.03);
+  margin-bottom: 3px;
+}
+.agent-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 2.5s ease infinite;
+}
+.agent-name { flex: 1; color: var(--text-secondary); }
+.agent-count { font-weight: 700; font-size: 10px; flex-shrink: 0; }
+
+
