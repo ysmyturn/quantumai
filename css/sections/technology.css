@@ -522,6 +522,39 @@
   padding: 16px 0 8px;
 }
 
+/* Quantum Quant 3분할 이미지 */
+.quant-img-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+.quant-img-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-card);
+}
+.quant-arrow {
+  display: none;
+}
+@media (max-width: 560px) {
+  .quant-img-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .quant-arrow {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    color: var(--color-primary);
+    animation: quant-arrow-bounce 1.5s ease-in-out infinite;
+  }
+  @keyframes quant-arrow-bounce {
+    0%, 100% { transform: translateY(0);   opacity: 0.7; }
+    50%       { transform: translateY(4px); opacity: 1;   }
+  }
+}
+
 /* 이미지 버전: 배경을 이미지 배경색과 맞춰 모서리 이질감 제거 */
 .ba-viz-img {
   display: block;
