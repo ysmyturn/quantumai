@@ -34,7 +34,39 @@
 .service-card.glass-card { padding: 24px; }
   .neural-flow { flex-direction: column; height: auto; gap: 16px; }
   .neural-connections { display: none; }
-  .data2vec-flow { flex-direction: column; }
+
+  /* Data2Vec: 세로 흐름으로 전환, 화살표 90도 회전해 ↓ 방향으로 */
+  .data2vec-flow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .flow-inputs { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .flow-input-item { flex: 1 1 auto; justify-content: center; }
+  .flow-core,
+  .flow-output { min-width: 0; width: 100%; }
+  .flow-arrow-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flow-arrow-lines { display: none; }
+  .flow-arrow-tip {
+    display: inline-block;
+    font-size: 22px;
+    animation: arrow-pulse-down 1.5s ease-in-out infinite;
+  }
+  .flow-arrow-right {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    animation: arrow-pulse-down 1.5s ease-in-out infinite;
+  }
+  @keyframes arrow-pulse-down {
+    0%, 100% { transform: rotate(90deg) translateX(0);   opacity: 0.7; }
+    50%       { transform: rotate(90deg) translateX(4px); opacity: 1;   }
+  }
+
   .compression-viz { grid-template-columns: 1fr; }
   .comp-arrow { flex-direction: row; padding: 8px 0; }
 }

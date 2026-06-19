@@ -16,7 +16,12 @@ function initActiveNav() {
   }
 
   function updateActive() {
-    const scrollY = window.scrollY + 100;
+    // 드로어 오픈 시 body가 fixed되어 window.scrollY=0이 되므로 저장된 값 사용
+    const isFixed = document.body.style.position === 'fixed';
+    const rawY = isFixed
+      ? parseInt(document.body.dataset.scrollY || '0', 10)
+      : window.scrollY;
+    const scrollY = rawY + 100;
 
     let current = sections.length ? sections[0].getAttribute('id') : '';
     sections.forEach(sec => {
@@ -35,5 +40,6 @@ function initActiveNav() {
   }
 
   window.addEventListener('scroll', updateActive, { passive: true });
+  window.addEventListener('draweropen', updateActive, { passive: true });
   updateActive(); // 페이지 로드 시 즉시 실행
 }

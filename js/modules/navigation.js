@@ -19,6 +19,7 @@ function initNavigation() {
   // Drawer open
   function openDrawer() {
     const scrollY = window.scrollY;
+    document.body.dataset.scrollY = scrollY;
     drawer.classList.add('open');
     overlay.classList.add('active');
     hamburger.classList.add('open');
@@ -26,7 +27,7 @@ function initNavigation() {
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollY}px`;
     document.body.style.width = '100%';
-    document.body.dataset.scrollY = scrollY;
+    window.dispatchEvent(new Event('draweropen'));
     closeBtn.focus();
   }
 

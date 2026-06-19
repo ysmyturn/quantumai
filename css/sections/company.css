@@ -29,6 +29,14 @@
   padding: 20px 16px;
   border-bottom: 1px solid var(--border-glass);
 }
+
+@media (max-width: 560px) {
+  .profile-row {
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+    padding: 16px 12px;
+  }
+}
 .profile-row:last-child { border-bottom: none; }
 .profile-key {
   font-family: var(--font-mono);

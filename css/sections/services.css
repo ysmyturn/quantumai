@@ -62,7 +62,7 @@
 
 .service-features li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   font-size: 14px;
   color: var(--text-secondary);
@@ -73,6 +73,7 @@
   height: 5px;
   border-radius: 50%;
   flex-shrink: 0;
+  margin-top: 0.5em;
 }
 
 .cyan-dot   { background: var(--color-primary); }

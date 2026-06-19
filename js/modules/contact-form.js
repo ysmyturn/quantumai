@@ -74,7 +74,7 @@ function initContactForm() {
 
     // Simulate submission
     const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending…';
+    submitBtn.textContent = '보내는 중…';
     submitBtn.disabled = true;
     submitBtn.style.opacity = '0.7';
 

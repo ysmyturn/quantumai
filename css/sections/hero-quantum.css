@@ -233,6 +233,7 @@
   .hero-stage { padding: 80px 20px 56px; }
   .hero-vis-banner { height: min(440px, 60vh); }
   #hero .hero-inner { padding: 24px 20px 72px; }
+  #hero .hero-h1 { font-size: clamp(32px, 3.6vw, 51px); }
 }
 
 /* 좁은 화면: chip을 써클 둘레로 모으므로 크기 약간 축소 */
