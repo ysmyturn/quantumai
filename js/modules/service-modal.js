@@ -82,7 +82,6 @@ function initServiceModal() {
         <span class="modal-screen-label" id="modal-screen-label">${firstLabel}</span>
       </div>
       ${body}
-      <p class="svc-modal-esc-hint">ESC 또는 바깥 영역을 클릭하면 닫힙니다</p>
     `;
 
     overlay.removeAttribute('hidden');
