@@ -9,8 +9,12 @@
 @media (max-width: 640px)  { .cmp-block { padding: 60px 0; } }
 
 /* company-section 자체 padding은 타이틀 영역만 담당하므로 하단 제거 */
-.company-section { padding-bottom: 0; }
-@media (max-width: 640px) { .company-section { padding-top: calc(var(--nav-height) + 60px); } }
+.company-section {
+  padding-top: calc(var(--nav-height) + 120px);
+  padding-bottom: 0;
+}
+@media (max-width: 1024px) { .company-section { padding-top: calc(var(--nav-height) + 60px); } }
+@media (max-width: 640px)  { .company-section { padding-top: calc(var(--nav-height) + 40px); } }
 /* ─── PROFILE (회사 개요) ────────────────────────────────── */
 .profile-layout {
   display: grid;
